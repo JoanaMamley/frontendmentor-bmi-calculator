@@ -1,0 +1,43 @@
+<div class="bmi-background">
+    <div class="title-description">
+        <img src="../../assets/images/logo.svg" alt="logo">
+        <h1 class="mt-4 heading-x-large">Body Mass Index Calculator</h1>
+        <p class="medium-body mt-2">
+            Better understand your weight in relation to your height using our body mass index (BM) 
+            calculator. While BMI is not the sole determinant of a healthy weight, it offers a 
+            valuable starting point to evaluate your overall health and well-being.
+        </p>
+    </div>
+
+    <div class="calculator px-4">
+        <h2 class="heading-medium mt-3">Enter your details below</h2>
+
+        <div class="radio d-flex justify-content-between">
+            <div>
+                <input type="radio" id="metric" name="metric" value="metric" [checked]="metricOptionSelected" (change)="onOptionChange(true)">
+                <label for="metric" class="bold-medium-body medium-body ms-2">Metric</label><br>
+            </div>
+            <div>
+                <input type="radio" id="imperial" name="imperial" value="imperial" [checked]="!metricOptionSelected" (change)="onOptionChange(false)">
+                <label for="imperial" class="bold-medium-body medium-body ms-2">Imperial</label>
+            </div>
+        </div>
+
+        <div>
+            <div class="height mt-3">
+                <p class="small-body">Height</p>
+                <div class="measurement-input heading-medium bold-medium-body w-100 p-2 bmi-metric-input">
+                    <input type="text" class="border-0">
+                    <span>cm</span>
+                </div>
+            </div>
+            <div class="weight mt-3">
+                <p class="small-body">Weight</p>
+                <div class="measurement-input heading-medium bold-medium-body">
+                    <input type="text" class="w-100 p-2 bmi-metric-input">
+                    <span class="measurement-weight">kg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

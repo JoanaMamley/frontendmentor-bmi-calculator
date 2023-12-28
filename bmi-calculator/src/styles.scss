@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif; 
+}
+
+h1, h2, h3{
+    color: #253347;
+    font-weight: 600;
+}
+
+p {
+   color: #5E6E85;
+}
+
+
+.heading-x-large{
+  font-size: 40px;  
+}
+
+.heading-large{
+    font-size: 30px;
+}
+
+.heading-medium{
+    font-size: 20px;
+}
+
+.heading-small{
+    font-size: 15px;
+}
+
+
+.small-body{
+    font-size: 14px;
+}
+
+.medium-body{
+    font-size: 16px;
+}
+
+.bold-medium-body{
+    font-weight: 600;
+}

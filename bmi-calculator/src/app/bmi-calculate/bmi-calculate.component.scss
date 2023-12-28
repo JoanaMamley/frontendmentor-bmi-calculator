@@ -1,0 +1,70 @@
+.bmi-background{
+    padding: 0;
+    margin: 0;
+}
+
+.title-description{
+    background-image: linear-gradient(to bottom right, white, #AFDBF5);
+    padding: 5rem 5rem 9rem;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+}
+
+
+.calculator{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    right: 5%;
+    z-index: 2;
+}
+
+/* Hide default radio button */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px; /* Set a size for the fake radio button */
+    height: 15px;
+    border-radius: 50%; /* Make it round */
+    outline: none;
+    border: 2px solid #D8E2E7; /* Default border color */
+  }
+  
+  /* Blue color when selected */
+  input[type="radio"]:checked {
+    background-color: rgb(52, 95, 246);
+    box-shadow: 0 0 20px rgba(52, 95, 246);
+  }
+  
+
+.bmi-metric-input{
+    border: 2px solid #D8E2E7;
+    border-radius: 12px;
+}
+
+.measurement-height {
+    position: absolute;
+    top: 44%;
+    right: 55px; /* Adjust the right distance from the input field */
+    transform: translateY(-50%);
+    color: rgb(52, 95, 246); /* Change the color as desired */
+    pointer-events: none; /* Ensures the span doesn't interfere with input events */
+}
+
+.measurement-weight {
+  position: absolute;
+  top: 84%;
+  right: 55px; /* Adjust the right distance from the input field */
+  transform: translateY(-50%);
+  color: rgb(52, 95, 246); /* Change the color as desired */
+  pointer-events: none; /* Ensures the span doesn't interfere with input events */
+}
+  
