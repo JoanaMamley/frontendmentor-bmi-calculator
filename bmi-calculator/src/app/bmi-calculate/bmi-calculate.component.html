@@ -26,16 +26,53 @@
         <div>
             <div class="height mt-3">
                 <p class="small-body">Height</p>
-                <div class="measurement-input heading-medium bold-medium-body w-100 p-2 bmi-metric-input">
-                    <input type="text" class="border-0">
-                    <span>cm</span>
+                <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 p-2 bmi-metric-input">
+                    <input placeholder="0" type="number" class="border-0" [(ngModel)]="inputValues.heightInputCm" (ngModelChange)="onInputChange()">
+                    <span class="measurement-unit">cm</span>
+                </div>
+                <div *ngIf="!metricOptionSelected" class="bmi-imperial-units">
+                    <div class="heading-medium bold-medium-body bmi-imperial-box d-flex justify-content-around py-2">
+                        <input placeholder="0" type="number" class="bmi-imperial-input border-0" [(ngModel)]="inputValues.heightInputFt" (ngModelChange)="onInputChange()">
+                        <span class="measurement-unit me-2">ft</span>
+                    </div>
+                    <div class="heading-medium bold-medium-body bmi-imperial-box d-flex justify-content-around py-2">
+                        <input placeholder="0" type="number" class="bmi-imperial-input border-0" [(ngModel)]="inputValues.heightInputIn" (ngModelChange)="onInputChange()">
+                        <span class="measurement-unit me-2">in</span>
+                    </div>
                 </div>
             </div>
+
             <div class="weight mt-3">
                 <p class="small-body">Weight</p>
-                <div class="measurement-input heading-medium bold-medium-body">
-                    <input type="text" class="w-100 p-2 bmi-metric-input">
-                    <span class="measurement-weight">kg</span>
+                <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 p-2 bmi-metric-input">
+                    <input placeholder="0" type="number" class="border-0" [(ngModel)]="inputValues.weightInputKg" (ngModelChange)="onInputChange()">
+                    <span class="measurement-unit">kg</span>
+                </div>
+                <div *ngIf="!metricOptionSelected" class="bmi-imperial-units">
+                    <div class="heading-medium bold-medium-body bmi-imperial-box d-flex justify-content-around py-2">
+                        <input placeholder="0" type="number" class="bmi-imperial-input border-0" [(ngModel)]="inputValues.weightInputSt" (ngModelChange)="onInputChange()">
+                        <span class="measurement-unit me-2">st</span>
+                    </div>
+                    <div class="heading-medium bold-medium-body bmi-imperial-box d-flex justify-content-around py-2">
+                        <input placeholder="0" type="number" class="bmi-imperial-input border-0" [(ngModel)]="inputValues.weightInputLbs" (ngModelChange)="onInputChange()">
+                        <span class="measurement-unit me-2">lbs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <div class="result p-3">
+                <div *ngIf="bmiResult">
+                    <p class="medium-body text-white bold-medium-body">Your BMI result is ...</p>
+                    <h1 class="heading-x-large text-white">{{ bmiResult }}</h1>
+                    <p class="text-white medium-body">
+                        Your BMI suggests you're {{ weightCategory }}. Your ideal weight is between <span class="bold-medium-body">{{ idealWeightRange.lowerRange }} - {{ idealWeightRange.upperRange }}</span>.
+                    </p>
+                </div>
+                <div *ngIf="!bmiResult">
+                    <h3 class="heading-medium text-white">Welcome</h3>
+                    <p class="text-white medium-body">Enter your height and weight and you'll see your BMI result here</p>
                 </div>
             </div>
         </div>

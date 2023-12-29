@@ -6,6 +6,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Inter', sans-serif; 
+    background-color: #E7F5FE;
 }
 
 h1, h2, h3{
@@ -45,4 +46,12 @@ p {
 
 .bold-medium-body{
     font-weight: 600;
+}
+
+input:focus {
+    outline: none;
+}
+
+.text-white{
+    color: white
 }

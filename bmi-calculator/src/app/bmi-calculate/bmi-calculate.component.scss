@@ -50,21 +50,28 @@ input[type="radio"] {
     border-radius: 12px;
 }
 
-.measurement-height {
-    position: absolute;
-    top: 44%;
-    right: 55px; /* Adjust the right distance from the input field */
-    transform: translateY(-50%);
-    color: rgb(52, 95, 246); /* Change the color as desired */
-    pointer-events: none; /* Ensures the span doesn't interfere with input events */
+.bmi-imperial-box{
+  border: 2px solid #D8E2E7;
+  border-radius: 6px;
+  width: 40%;
 }
 
-.measurement-weight {
-  position: absolute;
-  top: 84%;
-  right: 55px; /* Adjust the right distance from the input field */
-  transform: translateY(-50%);
-  color: rgb(52, 95, 246); /* Change the color as desired */
-  pointer-events: none; /* Ensures the span doesn't interfere with input events */
+.bmi-imperial-units{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bmi-imperial-input{
+  width: 70%;
+}
+
+.measurement-unit {
+    color: rgb(52, 95, 246); /* Change the color as desired */
+}
+
+.result{
+  text-align: left;
+  background-color: rgb(52, 95, 246);
+  border-radius: 8px;
 }
   

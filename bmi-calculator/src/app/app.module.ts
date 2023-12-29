@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { LimitationsComponent } from './limitations/limitations.component';
 import { ResultMeaningComponent } from './result-meaning/result-meaning.component';
 import { BmiCalculateComponent } from './bmi-calculate/bmi-calculate.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BmiCalculateComponent } from './bmi-calculate/bmi-calculate.component';
     BmiCalculateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
