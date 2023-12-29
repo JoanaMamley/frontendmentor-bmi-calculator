@@ -1,29 +1,25 @@
 .bmi-background{
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .title-description{
     background-image: linear-gradient(to bottom right, white, #AFDBF5);
-    padding: 5rem 5rem 9rem;
+    padding: 3rem 5rem 7rem;
     text-align: center;
     border-radius: 0 0 40px 40px;
-    position: absolute;
-    bottom: 10%;
-    z-index: 1;
+    margin-bottom: -7rem; 
 }
 
 
 .calculator{
     background-color: white;
     width: 90%;
-    margin: 0 auto;
     padding-bottom: 2rem;
-    position: absolute;
-    top: 70%;
-    left: 5%;
-    right: 5%;
-    z-index: 2;
 }
 
 /* Hide default radio button */
@@ -31,11 +27,11 @@ input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 15px; /* Set a size for the fake radio button */
+    width: 15px; 
     height: 15px;
-    border-radius: 50%; /* Make it round */
+    border-radius: 50%; 
     outline: none;
-    border: 2px solid #D8E2E7; /* Default border color */
+    border: 2px solid #D8E2E7; 
   }
   
   /* Blue color when selected */
@@ -66,7 +62,7 @@ input[type="radio"] {
 }
 
 .measurement-unit {
-    color: rgb(52, 95, 246); /* Change the color as desired */
+    color: rgb(52, 95, 246); 
 }
 
 .result{
