@@ -41,6 +41,12 @@ input[type="radio"] {
     box-shadow: 0 0 20px rgba(52, 95, 246);
   }
   
+input:hover, 
+.bmi-metric-input:hover, 
+.bmi-imperial-box:hover{
+  border: 2px solid rgba(52, 95, 246); 
+  cursor: pointer;
+}
 
 .bmi-metric-input{
     border: 2px solid #D8E2E7;
