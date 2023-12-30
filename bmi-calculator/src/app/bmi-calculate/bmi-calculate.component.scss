@@ -20,6 +20,7 @@
     background-color: white;
     width: 90%;
     padding-bottom: 2rem;
+    box-shadow: 0 8px 8px 8px rgba(231, 245, 254, 0.8);
 }
 
 /* Hide default radio button */
@@ -70,4 +71,24 @@ input[type="radio"] {
   background-color: rgb(52, 95, 246);
   border-radius: 8px;
 }
+
+@media screen and (min-width: 768px) {
+  .flex-height-weight{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .height{
+    width: 49%;
+  }
+
+  .weight{
+    width: 49%;
+  }
+
+  .result{
+    border-radius: 8px 70px 70px 8px;
+  }
+}
+
   

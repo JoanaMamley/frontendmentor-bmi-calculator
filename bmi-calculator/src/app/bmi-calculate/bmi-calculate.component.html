@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div>
+        <div [ngClass]="{ 'flex-height-weight': metricOptionSelected}">
             <div class="height mt-3">
                 <p class="small-body">Height</p>
                 <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 p-2 bmi-metric-input">

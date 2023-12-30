@@ -8,3 +8,34 @@
     margin: 3rem auto;
     width: 90%;
 }
+
+.tips-section{
+    background-image: linear-gradient(to bottom right, #FBFBFD, #E7F5FE);
+}
+
+.image-man-eating{
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 768px){
+    .result-meaning{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image-man-eating{
+        width: 50%;
+    }
+
+    .result-meaning-text{
+        width: 40%;
+        align-self: center;
+    }
+
+    .tip {
+        display: flex;
+        justify-content: space-between;
+    }
+}

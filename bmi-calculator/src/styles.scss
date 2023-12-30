@@ -6,7 +6,8 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Inter', sans-serif; 
-    background-color: #E7F5FE;
+    background-color: #FBFBFD;
+    // background-image: linear-gradient(to bottom right, #E7F5FE, #FBFBFD);
 }
 
 h1, h2, h3{
@@ -36,10 +37,6 @@ p {
 }
 
 
-.small-body{
-    font-size: 8px;
-}
-
 .medium-body{
     font-size: 11px;
 }
@@ -62,4 +59,31 @@ input:focus {
 
 .white-background{
     background-color: white;
+}
+
+@media screen and (min-width: 768px){
+    .heading-x-large{
+        font-size: 64px;  
+    }
+      
+    .heading-large{
+          font-size: 48px;
+    }
+      
+    .heading-medium{
+          font-size: 24px;
+    }
+      
+    .heading-small{
+          font-size: 20px;
+    }
+
+    .medium-body{
+        font-size: 14px;
+    }
+    
+    .large-body{
+        font-size: 16px;
+    }
+      
 }
