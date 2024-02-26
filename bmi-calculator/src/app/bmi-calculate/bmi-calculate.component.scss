@@ -97,4 +97,35 @@ input:hover,
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .bmi-background{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+
+  .title-description{
+    text-align: left;
+    margin-right: -8rem; 
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .title-text{
+    width: 70%;
+  }
+
+  .calculator{
+    margin-left: -10rem;
+    width: 50%;
+    margin-top: 3rem;
+    margin-right: 4rem;
+    box-shadow: 0 8px 8px 0 rgba(231, 245, 254, 0.8);
+  }
+
+  .title-description-height{
+    padding: 3rem 5rem 12rem;
+  }
+}
+
   

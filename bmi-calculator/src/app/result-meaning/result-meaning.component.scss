@@ -38,4 +38,46 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .tip-text{
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .image-man-eating{
+        margin-left: 5rem;
+        height: 30%;
+        width: 30%;
+    }
+
+    .bmi-result-heading{
+        font-size: 48px;
+    }
+
+    .large-body{
+        font-size: 20px;
+    }
+
+    .tips-section{
+        margin-top: 5rem;
+    }
+
+    .tips{
+        display: flex;
+        gap: 20px;
+    }
+
+    .tip{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .tip-img{
+        width: 20%;
+    }
+
+    .tip-text{
+        margin-left: 0;
+    }
 }

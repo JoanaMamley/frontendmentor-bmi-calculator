@@ -1,12 +1,14 @@
 <div class="bmi-background">
-    <div class="title-description">
-        <img src="../../assets/images/logo.svg" alt="logo">
-        <h1 class="mt-4 heading-x-large">Body Mass Index Calculator</h1>
-        <p class="medium-body mt-2">
-            Better understand your weight in relation to your height using our body mass index (BM) 
-            calculator. While BMI is not the sole determinant of a healthy weight, it offers a 
-            valuable starting point to evaluate your overall health and well-being.
-        </p>
+    <div class="title-description" [ngClass]="{ 'title-description-height': !metricOptionSelected}">
+        <div class="title-text">
+            <img src="../../assets/images/logo.svg" alt="logo">
+            <h1 class="mt-4 heading-x-large">Body Mass Index Calculator</h1>
+            <p class="medium-body mt-2">
+                Better understand your weight in relation to your height using our body mass index (BM)
+                calculator. While BMI is not the sole determinant of a healthy weight, it offers a
+                valuable starting point to evaluate your overall health and well-being.
+            </p>
+        </div>
     </div>
 
     <div class="calculator px-4">
