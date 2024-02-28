@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-result-meaning',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./result-meaning.component.scss']
 })
 export class ResultMeaningComponent {
-
+  @Input() hasLargeScreen!: boolean;
 }

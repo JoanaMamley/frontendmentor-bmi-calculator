@@ -7,7 +7,6 @@ body, html {
     height: 100%;
     font-family: 'Inter', sans-serif; 
     background-color: #FBFBFD;
-    // background-image: linear-gradient(to bottom right, #E7F5FE, #FBFBFD);
 }
 
 h1, h2, h3{
@@ -84,6 +83,11 @@ input:focus {
     
     .large-body{
         font-size: 16px;
+    }
+
+    .curved-left {
+        margin-left: 68%;
+        margin-bottom: 2%;
     }
       
 }
