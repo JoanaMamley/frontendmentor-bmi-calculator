@@ -1,4 +1,4 @@
-<div class="limitations">
+<div class="limitations" *ngIf="!hasLargeScreen">
     <div class="title-section">
         <h2 class="heading-large">Limitations of BMI</h2>
         <p class="large-body">
@@ -61,5 +61,71 @@
                 To learn more, it is advised to discuss this with your GP or practice nurse.
             </p>
         </div>
+    </div>
+</div>
+
+<div class="limitations" *ngIf="hasLargeScreen">
+    <div class="title-section">
+        <h2 class="heading-large">Limitations of BMI</h2>
+        <p class="large-body">
+            Although BMI is often a practical indicator of healthy weight, it is not suited for every person. 
+            Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial 
+            to use.
+        </p>
+    </div>
+
+    <div class="card gender">
+        <span class="d-flex w-25">
+            <img src="../../assets/images/icon-gender.svg" alt="gender">
+            <h3 class="heading-small mt-2 ms-1">Gender</h3>
+        </span>
+        <p class="large-body mt-2">
+            The development and body fat composition of girls and boys vary with age. Consequently, a child's age and 
+            gender are considered when evaluating their BMI.
+        </p>
+    </div>
+
+    <img class="curved-right" src="../../assets/images/pattern-curved-line-right.svg" alt="">
+
+    <div class="card age">
+        <span class="d-flex w-25">
+            <img src="../../assets/images/icon-age.svg" alt="age">
+            <h3 class="heading-small mt-2 ms-1">Age</h3>
+        </span>
+        <p class="large-body mt-2">
+            In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.
+        </p>
+    </div>
+
+    <div class="card muscle">
+        <span class="d-flex w-25">
+            <img src="../../assets/images/icon-muscle.svg" alt="muscle">
+            <h3 class="heading-small mt-2 ms-1">Muscle</h3>
+        </span>
+        <p class="large-body mt-2">
+            BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.
+        </p>
+    </div>
+
+    <div class="card pregnancy">
+        <span class="d-flex w-25">
+            <img src="../../assets/images/icon-pregnancy.svg" alt="pregnancy">
+            <h3 class="heading-small mt-2 ms-1">Pregnancy</h3>
+        </span>
+        <p class="large-body mt-2">
+            Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is 
+            advisable to minimise health risks for both mother and child.
+        </p>
+    </div>
+
+    <div class="card race">
+        <span class="d-flex w-25">
+            <img src="../../assets/images/icon-race.svg" alt="race">
+            <h3 class="heading-small mt-2 ms-1">Race</h3>
+        </span>
+        <p class="large-body mt-2">
+            Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. 
+            To learn more, it is advised to discuss this with your GP or practice nurse.
+        </p>
     </div>
 </div>
