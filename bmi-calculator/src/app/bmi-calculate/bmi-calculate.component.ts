@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bmi-calculate',
   templateUrl: './bmi-calculate.component.html',
   styleUrls: ['./bmi-calculate.component.scss']
 })
-export class BmiCalculateComponent {
+export class BmiCalculateComponent implements OnInit{
+  hasSmallScreen!: boolean;
   metricOptionSelected: boolean = true;
   bmiResult!: string;
   inputValues = {
@@ -20,6 +21,15 @@ export class BmiCalculateComponent {
   idealWeightRange!: {
     upperRange: string;
     lowerRange: string;
+  }
+
+  ngOnInit(): void {
+    this.hasSmallScreen = window.innerWidth < 768;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: unknown) {
+    this.hasSmallScreen = window.innerWidth < 768;
   }
 
   onOptionChange(isMetricOption: boolean) {

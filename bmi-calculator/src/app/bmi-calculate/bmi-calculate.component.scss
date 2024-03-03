@@ -50,18 +50,19 @@ input:hover,
 
 .bmi-metric-input{
     border: 2px solid #D8E2E7;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .bmi-imperial-box{
   border: 2px solid #D8E2E7;
   border-radius: 6px;
-  width: 40%;
+  width: 45%;
 }
 
 .bmi-imperial-units{
   display: flex;
   justify-content: space-between;
+  width: 100%
 }
 
 .bmi-imperial-input{
@@ -82,14 +83,6 @@ input:hover,
   .flex-height-weight{
     display: flex;
     justify-content: space-between;
-  }
-
-  .height{
-    width: 49%;
-  }
-
-  .weight{
-    width: 49%;
   }
 
   .result{
