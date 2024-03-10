@@ -8,7 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class BmiCalculateComponent implements OnInit{
   hasSmallScreen!: boolean;
   metricOptionSelected: boolean = true;
-  bmiResult!: string;
+  bmiResult: string | undefined;
   inputValues = {
     heightInputFt: "",
     heightInputIn: "",
@@ -34,6 +34,15 @@ export class BmiCalculateComponent implements OnInit{
 
   onOptionChange(isMetricOption: boolean) {
     this.metricOptionSelected = isMetricOption;
+    this.bmiResult = undefined;
+    this.inputValues = {
+      heightInputFt: "",
+      heightInputIn: "",
+      heightInputCm: "",
+      weightInputKg: "",
+      weightInputSt: "",
+      weightInputLbs: "",
+    }
   }
 
   onInputChange(): void{
@@ -41,9 +50,9 @@ export class BmiCalculateComponent implements OnInit{
     let weight: number;
     let result: number;
     if(this.inputValues.weightInputKg && this.inputValues.heightInputCm){
-      height = +this.inputValues.heightInputCm;
+      height = +this.inputValues.heightInputCm / 100;
       weight = +this.inputValues.weightInputKg;
-      result = weight / height;
+      result = weight / (height**2);
       this.idealWeight(result, height)
     }
 
@@ -73,11 +82,22 @@ export class BmiCalculateComponent implements OnInit{
       this.weightCategory = 'obese';
     }
 
-    let lRange = 18.5 * height;
-    let uRange = 24.9 * height;
-    this.idealWeightRange = {
-      lowerRange: `${ (lRange/14).toFixed(0) }st ${ (lRange%14).toFixed(0) }lbs`,
-      upperRange: `${ (uRange/14).toFixed(0) }st ${ (uRange%14).toFixed(0) }lbs`
+    if (this.metricOptionSelected) {
+      let lRange = 18.5 * (height**2);
+      let uRange = 24.9 * (height**2);
+      this.idealWeightRange = {
+        lowerRange: `${ (lRange).toFixed(1) }kgs`,
+        upperRange: `${ (uRange).toFixed(1) }kgs`
+      }
+    }
+
+    if (!this.metricOptionSelected) {
+      let lRange = (18.5 * (height**2))/703;
+      let uRange = (24.9 * (height**2))/703;
+      this.idealWeightRange = {
+        lowerRange: `${ (lRange/14).toFixed(0) }st ${ (lRange%14).toFixed(0) }lbs`,
+        upperRange: `${ (uRange/14).toFixed(0) }st ${ (uRange%14).toFixed(0) }lbs`
+      }
     }
   }
 }

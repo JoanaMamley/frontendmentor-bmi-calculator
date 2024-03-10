@@ -28,7 +28,7 @@
         <div [ngClass]="{ 'flex-height-weight': metricOptionSelected}">
             <div class="height mt-3" [ngStyle]="{'width.%': metricOptionSelected && !hasSmallScreen ? 49 : 100}">
                 <p class="small-body">Height</p>
-                <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 py-1 bmi-metric-input">
+                <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 p-2 bmi-metric-input">
                     <input placeholder="0" type="number" class="border-0" [(ngModel)]="inputValues.heightInputCm" (ngModelChange)="onInputChange()">
                     <span class="measurement-unit">cm</span>
                 </div>
@@ -46,7 +46,7 @@
 
             <div class="weight mt-3" [ngStyle]="{'width.%': metricOptionSelected && !hasSmallScreen ? 49 : 100}">
                 <p class="small-body">Weight</p>
-                <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 py-1 bmi-metric-input">
+                <div *ngIf="metricOptionSelected" class="heading-medium bold-medium-body w-100 p-2 bmi-metric-input">
                     <input placeholder="0" type="number" class="border-0" [(ngModel)]="inputValues.weightInputKg" (ngModelChange)="onInputChange()">
                     <span class="measurement-unit">kg</span>
                 </div>
